@@ -23,9 +23,9 @@ function dateSample(sampleActivity) {
 
   const sampleNum = Number(sampleActivity);
   if (sampleNum > 0 && sampleNum <= MODERN_ACTIVITY  ) {
-    let K = 0.693 / HALF_LIFE_PERIOD;
-    let age = Math.ceil(Math.log(MODERN_ACTIVITY / sampleNum) / K);
-    return age;
+    let coeff = 0.693 / HALF_LIFE_PERIOD;
+    let result = Math.ceil(Math.log(MODERN_ACTIVITY / sampleNum) / coeff);
+    return result;
   }
   return false;
 }
